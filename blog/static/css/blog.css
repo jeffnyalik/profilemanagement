@@ -1,0 +1,17 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: rem;
+}
+
+ul {
+    margin: 0;
+}
+
+.site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+}
+
+.card {
+    margin-top: 15px;
+}

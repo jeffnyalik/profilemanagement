@@ -1,0 +1,16 @@
+{% extends "./base.html" %}
+{% block content %}
+    <div class="media pt-4">
+    <img class="mr-3 rounded-circle" src="{{object.author.profile.image.url}}" alt="" height="100" width="100">
+    <div class="media-body">
+        <h5 class="mt-0">{{object.author}}</h5>
+        <small><p style="text-align: right">{{object.date_posted|date:"F d, Y"}}</p></small>
+        <p class="text-secondary">{{object.content}}</p>
+        {% if object.author == user %}
+          <a href="{% url 'post-update' object.pk %}" class="btn btn-info btn-sm rounde-0">Edit</a>
+          <a href="{% url 'post-delete' object.pk %}" class="btn btn-danger btn-sm rounded-0">Delete</a>
+        {% endif %}
+    </div>
+    </div>
+    <hr>
+{% endblock content %}
